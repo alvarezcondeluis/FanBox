@@ -1,0 +1,67 @@
+
+
+.address-card {
+    display: flex;
+    align-items: center;
+    padding: 16px; 
+    margin-left: 35px;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 16px;
+    border: 1px solid #B6DEFA;
+    border-radius: 10px;
+    background-color: transparent; 
+    width: 45vw;
+    color: white;
+    cursor: pointer; /* Cambiar el cursor a puntero */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  }
+  
+  .address-card.selected {
+    background-color: #28333E;
+    cursor: default; /* El cursor vuelve a la flecha normal si está seleccionada */
+  }
+  
+  /* Aplicar hover solo si no está seleccionada */
+  .address-card:not(.selected):hover {
+    background-color: #2D3E50; /* Cambia el color de fondo al hacer hover */
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño de la card */
+  }
+  
+  
+  .address-card-radio {
+    color: #B6DEFA;
+  }
+  
+  .address-card-radio.Mui-checked {
+    color: #B6DEFA !important; 
+  }
+  
+  .address-card-details {
+    margin-left: 16px;
+  }
+  
+  .address-card-edit-link {
+    color: #B6DEFA;
+    font-size: 12px !important;  
+    cursor: pointer; 
+  }
+  
+  .address-card-text {
+    color: white;
+    font-family: 'Inter', sans-serif !important; 
+    font-weight: 250 !important;
+  }
+
+  .add-address-button {
+    color: rgb(231, 231, 231) !important;
+    text-transform: none !important;
+    font-family: 'Inter', sans-serif !important; 
+    transition: transform 300 ease color 300 ease !important ;
+  }
+
+  .add-address-button:hover{
+    background-color: transparent !important;
+    transform: scale(1.02); 
+    color: white !important;
+  }

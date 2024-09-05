@@ -1,0 +1,8 @@
+
+
+
+
+
+GET http://localhost:1234/api/discounts/validateDiscount?coupon=SUMMER2024
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1NTU1NTU1NS01NTU1LTU1NTUtNTU1NS01NTU1NTU1NTU1NTUiLCJ1c2VyUm9sZSI6ImFkbWluIiwiaWF0IjoxNzI0NjY4OTI0LCJleHAiOjE3MjQ2Nzk3MjR9.g8mIG3Kb3IAxW_IukAYYEZDyHHSatzO6Y1ddfWgRt2E

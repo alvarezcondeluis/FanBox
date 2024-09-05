@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&display=swap');
+
+.shopping-cart {
+    position: fixed;
+    top: 0;
+    right: -45vw; /* Inicialmente fuera de la vista */
+    width: 45vw;
+    height: 100vh;
+    background-color: #28333E;
+    color: white;
+    z-index: 1000;
+    display:flex;
+    flex-direction: column;
+    max-height: 100vh;
+    
+    transition: right 300ms ease-in-out; /* Transición para la visibilidad */
+  }
+  
+  /* Carrito cuando está abierto */
+  .shopping-cart.open {
+    right: 0; /* Mueve el carrito dentro de la vista */
+  }
+  
+  /* Estilos para el header del carrito */
+  .shopping-cart-header {
+    display: flex;
+    justify-self: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 10px 20px;
+    background-color: #28333E;
+    border-bottom: 1px solid #B6DEFA;
+  }
+
+  .shopping-cart-header h2 {
+    font-family: 'Inter', sans-serif ;
+    font-size: 24px;
+    font-weight: 300;
+    
+  }
+  
+  /* Estilos para el botón de cierre del carrito */
+  /* Estilos para el botón de cierre del carrito */
+.close-button {
+    background: none;
+    border: none;
+    color: #B6DEFA;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%; /* Hacer el botón circular */
+    padding: 8px; /* Ajustar el padding para hacer el botón más grande y circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 200ms ease-in-out; /* Transición para el color de fondo */
+  }
+  
+  .close-button:hover {
+    background-color: #20272f; /* Color de fondo al hacer hover */
+  }
+  
+  
+  /* Estilos para el contenido del carrito */
+  .shopping-cart-content {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 20px 0px 10px 0px;
+    text-align: center;
+    height: 100%; 
+    max-height: 90vh;
+     /* Agregar desplazamiento si el contenido es demasiado alto */
+}
+
+.shopping-cart-items-container {
+  height: 70%;
+  padding-right: 10px;
+  padding-left: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* Estilos para Chrome, Edge, Safari */
+.shopping-cart-items-container::-webkit-scrollbar {
+  width: 1px !important; /* Asegúrate de que la barra tenga un tamaño definido */
+}
+
+.shopping-cart-items-container::-webkit-scrollbar-track {
+  background: transparent; /* Hace el track invisible */
+}
+
+.shopping-cart-items-container::-webkit-scrollbar-thumb {
+  background-color: #add8e6; /* Color azul clarito */
+  border-radius: 50px; /* Hace el thumb redondo */
+  border: 1px solid transparent; /* Espacio alrededor del thumb para simular separación */
+}
+
+.shopping-cart-items-container::-webkit-scrollbar-thumb:hover {
+  background-color: #87ceeb; /* Cambia a un azul más fuerte al hacer hover */
+}
+
+/* Para Firefox */
+.shopping-cart-items-container {
+  scrollbar-width: thin; /* Asegura que la barra tenga un tamaño visible */
+  scrollbar-color: #add8e6 transparent; /* Color del thumb y del track */
+}
+
+
+  /* Estilos para el icono de carrito vacío */
+  .empty-cart-icon {
+    font-size: 9rem !important;
+    color: #B6DEFA;
+    margin-top: 40px;
+  }
+  
+  /* Estilos para la superposición (overlay) */
+  .cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in-out;
+  }
+  
+  /* Superposición visible */
+  .cart-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .cart-item-quantity-container {
+    background-color: #D9D9D9;
+    
+  }
+  .cart-item-minus-bottom {
+    border-right: 0.07rem solid black;
+    height: 40px
+    
+  }
+
+  .cart-item-quantity {
+    color: black;
+    
+  }
+
+  .cart-item-quantity-text {
+    color: black;
+    
+  }
+
+  .cart-item-minus-button-icon {
+    font-size: 0.8rem !important;
+    color: black;
+    
+  }
+
+  .cart-item-plus-button {
+    border-left: 0.07rem solid black;
+    height: 40px
+  }
+
+  .full-size-button {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    border-radius: 0 !important; /* Elimina cualquier borde redondeado */
+    display: flex;
+    justify-content: center; /* Centra el icono horizontalmente */
+    align-items: center; /* Centra el icono verticalmente */
+  }
+
+  .shopping-cart-buy-button {
+    width: 50%;
+    background-color: #B6DEFA !important;
+    border-radius: 20px !important;
+    color: black !important;
+    
+    text-transform: initial !important;
+    transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, box-shadow 200ms ease-in-out; /* Transición para el botón */
+  }
+  
+  .shopping-cart-buy-button:hover {
+    background-color: #a3d5f0 !important; /* Un tono más oscuro del color base */
+    transform: scale(1.01); /* Aumenta ligeramente el tamaño del botón */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Añade una sombra para hacer que el botón resalte */
+}
+
+.font-family {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 350 !important;
+}
+
+.font-family.bold {
+    
+    font-weight: 500 !important;
+}
+  

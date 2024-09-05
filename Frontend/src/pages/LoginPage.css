@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.auth-avatar-icon {
+    font-size: 5rem !important;
+    width: 80% !important;   
+    color: #28333E !important;
+}
+
+
+.form-container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px 20px 0px;
+    width: 100%;
+}
+
+
+.auth-form-label {
+    color: #F4F4F4;
+    margin-bottom: 6px !important;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    align-self: start;
+}
+
+.auth-form-field {
+  margin-bottom: 24px !important;
+  width:100%;
+  display: flex;
+  flex-direction: column !important;
+}
+
+.auth-form-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: black;
+  transition: backgrond-color 0.3s ease !important;
+}
+
+.auth-form-input:focus {
+  border: 1px solid #B6DEFA;
+} 
+
+.auth-form-input:hover{
+  background-color: #d4d0d0;
+}
+
+.auth-error-message {
+  color: rgb(212, 44, 44);
+  font-size: 12px;
+  margin-top: 5px;
+  align-self: start;
+}
+
+.auth-error-message.password{
+  margin-top: -20px;
+}
+
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.password-field-icon-container:hover {
+  color: #00000083;
+  background-color: #7473739c !important;
+}
+
+.password-field-icon {
+  
+  height: 20px !important;
+  cursor: pointer;
+}
+
+.password-field-icon-container {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  left: 280px;
+  transition: barckground-color 0.3s ease color 0.3s ease;
+  border-radius: 50%;
+  transform: translateY(-125%);
+  color: #888;
+}
+
+.password-field-icon:hover {
+  color: #000;
+}
+
+
+.auth-button {
+  background-color: #B6DEFA !important;
+  color: #28333E !important;
+  text-transform: initial !important;
+  margin: 20px 0 10px 0 !important;  
+  padding: 10px 0 !important;
+  transition: background-color 0.3s ease;
+  
+}
+
+.auth-button:hover {
+  background-color: #6b8caf !important;
+}
+
+
+.auth-links {
+  
+  margin-top: 10px !important;
+  color: #B6DEFA !important;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.auth-links:hover {
+  text-decoration: underline !important;
+}
+
+  
+
+/** Transition */
+
+
+  
+  
+  
+  
+  

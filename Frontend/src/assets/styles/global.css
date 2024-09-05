@@ -1,0 +1,8 @@
+
+  .App {
+    text-align: center;
+    background-color: #28333E;
+    width: calc(100vw - 17px);
+    overflow-x: hidden;
+  }
+  

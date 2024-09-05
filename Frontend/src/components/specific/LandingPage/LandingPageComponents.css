@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+
+/* Banner */
+.banner {
+    
+    background-image: url('../../../../public/banner3.jpeg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el área del banner */
+    background-position: center; /* Centra la imagen en el banner */
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+  }
+
+  
+
+.feature-box {
+    background-color: #28333E;
+    text-align: top;
+    padding: 10px 0px 0px 30px;
+    margin: 0px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    height: 100%;
+    border-left: 0.5px solid #B6DEFA;
+    max-height: 200px;
+    
+  }
+  
+  /* Feature */
+  
+  .feature-icon {
+    background-color: #B6DEFA;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 0px auto;
+  }
+  
+  .feature-title {
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .feature-description {
+    font-family: 'Inter', sans-serif;
+    color: #b0b0b0;
+  }
+
+  /* Features */
+
+  .features-container {
+    text-align: center;
+    margin-top: 25px;
+    background-color: #1c1f2a;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar los contenidos verticalmente */
+   
+  }
+  
+  .features-grid {
+    flex-grow: 1; /* Permitir que el grid crezca para llenar el espacio disponible */
+  }
+
+  /* Product Section*/
+
+  .card-container {
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 0px 0px;
+    min-height: 27vh;
+    width: 170px;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px !important;
+    justify-content: end;
+  }
+
+  .button-price {
+    transition: background-color 0.3s ease, color 0.3s ease; 
+  }
+
+  .button-price:hover {
+    background-color: #263a50 !important;
+    color: #B6DEFA !important;
+    opacity: 0.9 !important;
+  }
+
+  .icon-button {
+    transition: background-color 0.3s ease;
+  }
+  .icon-button:hover {
+    background-color: rgba(188, 218, 240, 0.2) !important; /* Un color más claro de fondo */
+  }
+  
+
+  .product-section {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vh;
+    padding-bottom: 20px;
+    background: #28333E;
+    width: 100%;
+  }
+  
+  .product-section-title {
+    margin-bottom: 25px;
+    align-self: start;
+    font-size: 24px !important;
+  }
+  
+ 
+  
+
+

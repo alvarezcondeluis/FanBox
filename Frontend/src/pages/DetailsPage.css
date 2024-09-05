@@ -1,0 +1,17 @@
+.footer-divider-container-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10px;
+    background-color: #28333E;
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+  .footer-divider-details {
+    width: 100%;
+    align-self: center;
+    height: 0.0000001rem;
+    padding: 1px 0;
+    background-color: #a0c8f0; /* Color de la línea */     /* Espacio entre la línea y el footer */
+  }

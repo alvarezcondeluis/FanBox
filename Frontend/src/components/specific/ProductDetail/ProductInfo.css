@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.product-info-title {
+    margin-top: -30px !important;
+    justify-self: left !important;
+    align-self: left !important;
+    text-align: left !important;
+    padding-left: 15px;
+
+}
+
+.pin-container {
+    align-content: end !important;
+}
+
+.product-info-font {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}

@@ -1,0 +1,29 @@
+.landing-page-container {
+   display: flex;
+   flex-direction: column;
+   background-color: #28333E;
+   height: 100%;
+   overflow-x: hidden; /* Evita el scroll horizontal */
+   width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+}
+
+.page-container  {
+   display: flex;
+   flex-direction: column;
+   background-color: #28333E;
+   width: 100%;
+   flex: 0 0 90vh;
+   
+}
+
+.product-container {
+   display: flex;
+   flex-direction: column;
+   background-color: #28333E;
+   flex: 1; /* Permite que el contenedor crezca según sea necesario */
+   overflow-x: hidden; /* Evita el scroll horizontal */
+   width: 100%;
+   
+   
+    /* Asegura que el contenedor ocupe el ancho completo */
+}
