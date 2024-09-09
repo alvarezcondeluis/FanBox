@@ -14,13 +14,13 @@ Mi proyecto para el Trabajo de Fin de Grado consiste en una aplicación web para
 
 1. **Clonar el repositorio**:
 
-   Clona este repositorio en tu máquina local:
+Clona este repositorio en tu máquina local:
 
-   ```bash
+```bash
    git clone https://github.com/usuario/FanBox.git
-   ```
+```
 
-   Acceder al directorio del backend:
+Acceder al directorio del backend:
 
 ```
 cd Proyecto
@@ -36,4 +36,24 @@ Levantamos el servicio:
 
 ```
 npm run start
+```
+
+## Instrucciones para el Frontend
+
+Accedemos al directorio del frontend:
+
+```
+cd /ProyectoFrontend
+```
+
+Instalamos las dependencias necesarias
+
+```
+npm install
+```
+
+Levantamos el servidor:
+
+```
+npm run dev
 ```
