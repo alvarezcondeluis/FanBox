@@ -22,7 +22,7 @@ const AddressList: React.FC<AddressListProps> = ({ addresses, onDelete }) => {
   };
 
   const handleAddAddress = () => {
-    navigate({ pathname: "/address/new" });
+    navigate({ pathname: "/checkout/address/new" });
   };
 
   return (

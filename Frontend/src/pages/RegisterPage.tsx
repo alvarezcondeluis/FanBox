@@ -349,7 +349,7 @@ const RegisterPage: React.FC = () => {
                     </Field>
                     {errors.confirmPassword && touched.confirmPassword && (
                       <div className="auth-error-register-message password">
-                        {errors.password}
+                        {errors.confirmPassword}
                       </div>
                     )}
                   </div>

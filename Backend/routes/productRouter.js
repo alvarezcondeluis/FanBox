@@ -34,7 +34,6 @@ export const createProductRouter = (ProductModel, ProductUnitModel, ProductImage
   productsRouter.get('/:productID/units/:productNumber', productController.getUnit);
   productsRouter.put('/:productID/units/:productNumber', productController.updateUnit);
   productsRouter.delete('/:productID/units/:productNumber', productController.deleteUnit);
-  //productsRouter.get('/search', productController.search);
-  //productsRouter.get('/filter', productController.filter);
+
   return productsRouter
 }

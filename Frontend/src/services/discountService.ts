@@ -10,7 +10,7 @@ export const DiscountService = {
         throw new Error("No se ha iniciado sesión");
       }
       
-      const response = await api.get(`/discounts/validateCoupon`, {
+      const response = await api.get(`/discounts/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -18,12 +18,12 @@ export const DiscountService = {
           coupon: code,
         },
       });
-
-      return response.data.discount; // Asume que el descuento es un número que indica la cantidad a descontar
+      
+      return response.data; // Asume que el descuento es un número que indica la cantidad a descontar
     } catch (error: any) {
       if (axios.isAxiosError(error)) {
         if (error.response?.status === 404) {
-          console.log("404");
+          
           throw new Error("Cupón no válido o no encontrado");
         } else if (error.response?.status === 400) {
           throw new Error("Solicitud inválida");

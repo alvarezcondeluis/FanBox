@@ -26,8 +26,7 @@ export class ProductController {
     this.deleteImage = this.deleteImage.bind(this);
     this.updateImage = this.updateImage.bind(this);
     this.getProductDetails = this.getProductDetails.bind(this);
-   // this.search = this.search.bind(this);
-    //this.filter = this.filter.bind(this);
+    this.getMainImage = this.getMainImage.bind(this);
   }
 
 
@@ -261,25 +260,4 @@ export class ProductController {
   }
   }
 
-/** 
-  async search(req, res) {
-    try {
-      const { query } = req.query;
-      const products = await this.productService.search(query);
-      res.status(200).json(products);
-    } catch (error) {
-      next(error);
-    }
-  }
-
-  async filter(req, res) {
-    try {
-      const filters = req.query;
-      const products = await this.productService.filter(filters);
-      res.status(200).json(products);
-    } catch (error) {
-      next(error);
-    }
-  }
-*/
 }

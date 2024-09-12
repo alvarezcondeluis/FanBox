@@ -26,6 +26,7 @@ const PriceSummary: React.FC<PriceSummaryProps> = ({ isAddress }) => {
       setOpen(false);
       setError("");
       const result = await DiscountService.validateCoupon(coupon);
+      console.log(result);
       if (!result) {
         setError("Cupón inválido");
         return;

@@ -10,7 +10,7 @@ const cartItemSchema = z.object({
   productID: z.string({
     required_error: 'Product ID is required',
     invalid_type_error: 'Product ID must be a string'
-  }).refine(val => /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(val), {
+  }).refine(val => /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(val), { // Hay que tener en cuenta los guiones
     message: 'Product ID must be a valid UUID'
   }),
 

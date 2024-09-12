@@ -19,7 +19,7 @@ export class UserController {
   }
 
 
-  async getAll(req, res) {
+  async getAll(req, res, next) {
     try {
       const filters = req.query;
       const users = await this.userService.getAll(filters);
@@ -29,7 +29,7 @@ export class UserController {
     }
   }
 
-  async create(req, res) {
+  async create(req, res, next) {
     try {
         const newUser = await this.userService.create(req.body);
         res.status(201).json(newUser);
@@ -38,7 +38,7 @@ export class UserController {
     }
 }
 
-  async getById(req, res) {
+  async getById(req, res, next) {
     try {
       const { userID } = req.params;
       const user = await this.userService.getById(userID);
@@ -52,7 +52,7 @@ export class UserController {
     }
   }
 
-  async update(req, res) {
+  async update(req, res, next) {
     try {
       const { userID } = req.params;
       
@@ -67,7 +67,7 @@ export class UserController {
     }
   }
 
-  async delete(req, res) {
+  async delete(req, res, next) {
     try {
       const { userID } = req.params;
       const success = await this.userService.delete(userID);
@@ -81,7 +81,7 @@ export class UserController {
     }
   }
 
-  async getUserAddresses(req, res) {
+  async getUserAddresses(req, res, next) {
     try {
       const { userID } = req.params;
       const addresses = await this.userService.getUserAddresses(userID);
@@ -102,7 +102,7 @@ export class UserController {
     }
   }
 
-  async updateUserAddress(req, res) {
+  async updateUserAddress(req, res, next) {
     try {
       const { userID, addressID } = req.params;
       const updatedAddress = await this.userService.updateUserAddress(userID, addressID, req.body);
@@ -114,7 +114,7 @@ export class UserController {
   
   
 
-  async getUserAddress(req, res) {  
+  async getUserAddress(req, res, next) {  
     try {
       const { userID, addressID } = req.params;
       const address = await this.userService.getUserAddress(userID, addressID);

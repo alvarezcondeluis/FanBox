@@ -145,7 +145,7 @@ const CartItems: React.FC = () => {
               </Grid>
               <Grid item xs={1.5}>
                 <Typography textAlign={"right"} color={"black"}>
-                  {item.price * item.quantity}€
+                  {(item.price * item.quantity).toFixed(2)}€
                 </Typography>
               </Grid>
               <Grid item xs={1.5}>

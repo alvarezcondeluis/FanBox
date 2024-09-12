@@ -6,32 +6,38 @@ export class DiscountController {
   constructor(DiscountModel) {
     this.DiscountService = new DiscountService(DiscountModel);
     this.create = this.create.bind(this);
-    this.getAllOrValidate = this.getAllOrValidate.bind(this);
+    this.getByCode = this.getByCode.bind(this);
     this.getById = this.getById.bind(this);
     this.update = this.update.bind(this);
     this.delete = this.delete.bind(this);
+    this.getAll = this.getAll.bind(this);
     
   }
 
-
-  async getAllOrValidate(req, res, next) {
+  async getAll(req, res, next) {
     try {
-      const { code } = req.query;
+      console.log('getAll');
+      const discounts = await this.DiscountService.getAll();
+      res.status(200).json(discounts);
+    } catch (error) {
+      next(error);
+    }
+  }
 
-      if (code) {
-        // Si se proporciona un código, valida el cupón
-        const discount = await this.DiscountService.getByCode(code);
+  async getByCode(req, res, next) {
+    try {
+      const { coupon } = req.query;
+
+      
+       
+        const discount = await this.DiscountService.getByCode(coupon);
 
         if (discount) {
           res.status(200).json(discount);
         } else {
-          res.status(404).json({ error: 'Cupón no válido o no encontrado', code: 'NOT_FOUND' });
+          res.status(404).json({ error: 'Discount invalid or not found', code: 'NOT_FOUND' });
         }
-      } else {
-        // Si no hay código, devuelve todos los descuentos
-        const discounts = await this.DiscountService.getAll();
-        res.status(200).json(discounts);
-      }
+    
     } catch (error) {
       next(error);
     }

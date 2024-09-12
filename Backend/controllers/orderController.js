@@ -15,7 +15,7 @@ export class OrderController {
     this.getUserOrders = this.getUserOrders.bind(this);
   }
 
-  async createOrder(req, res) {
+  async createOrder(req, res, next) {
     try {
       
       const orderData = req.body;
@@ -26,7 +26,7 @@ export class OrderController {
     }
   }
 
-  async getAll(req, res) {
+  async getAll(req, res, next) {
     try {
       const orders = await this.orderService.getAll();
       res.status(200).json(orders);
@@ -35,7 +35,7 @@ export class OrderController {
     }
   }
 
-  async getById(req, res) {
+  async getById(req, res, next) {
     try {
       const { orderID } = req.params;
       const order = await this.orderService.getById(orderID);
@@ -49,7 +49,7 @@ export class OrderController {
     }
   }
 
-  async update(req, res) {
+  async update(req, res, next) {
     try {
       const { orderID } = req.params;
       const updatedOrder = await this.orderService.update(orderID, req.body);
@@ -63,7 +63,7 @@ export class OrderController {
     }
   }
 
-  async delete(req, res) {
+  async delete(req, res, next) {
     try {
       const { orderID } = req.params;
       const success = await this.orderService.delete(orderID);
@@ -77,47 +77,38 @@ export class OrderController {
     }
   }
 
-  async getOrderProducts(req, res) {
+  async getOrderProducts(req, res,next) {
     try {
       const { orderID } = req.params;
       const products = await this.orderService.getOrderProducts(orderID);
       res.status(200).json(products);
     } catch (error) {
-      if (error.message === 'Order not found') {
-        res.status(404).json({ error: error.message });
-      }
-      res.status(500).json({ error: error.message });
+      next(error);
     }
   }
 
-  async getOrderStatus(req,res) {
+  async getOrderStatus(req,res, next) {
     try {
       const { orderID } = req.params;
       const status = await this.orderService.getOrderStatus(orderID);
       res.status(200).json(status);
     } catch (error) {
-      if (error.message === 'Order not found') {
-        res.status(404).json({ error: error.message });
-      }
-      res.status(500).json({ error: error.message });
-    }
+     next(error);
   }
+}
 
-  async updateOrderStatus(req, res) {
+  async updateOrderStatus(req, res, next) {
     try {
       const { orderID } = req.params;
       const { status } = req.body;
       const updatedStatus = await this.orderService.updateOrderStatus(orderID, status);
       res.status(200).json(updatedStatus);
     } catch (error) {
-      if (error.message === 'Order not found') {
-        res.status(404).json({ error: error.message });
-      } 
-      res.status(500).json({ error: error.message });
-    }
+      next(error);
   }
+}
 
-  async getOrderHistory(req, res) {
+  async getOrderHistory(req, res, next) {
     try {
       const { orderID } = req.params;
       const history = await this.orderService.getOrderHistory(orderID);
@@ -127,20 +118,17 @@ export class OrderController {
         res.status(404).json({ error: 'Order not found' });
       }
     } catch (error) {
-      res.status(500).json({ error: error.message });
+      next(error);
     }
   }
 
-  async getUserOrders(req, res) { 
+  async getUserOrders(req, res,next) { 
     try {
       const { userID } = req.params;
       const orders = await this.orderService.getUserOrders(userID);
       res.status(200).json(orders);
     } catch (error) {
-      if (error.message === 'User not found') {
-        res.status(404).json({ error: error.message });
-      }
-      res.status(500).json({ error: error.message });
+      next(error);
     }
   }
 }

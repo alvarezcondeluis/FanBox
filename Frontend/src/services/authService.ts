@@ -15,6 +15,7 @@ export const AuthService = {
       Cookies.set('user', user.userID, { expires: date });
       return { token, user};
     } catch (error: any) {
+      
       if (axios.isAxiosError(error)) {
         if (error.response?.status === 404) {
           throw new Error('No existe el usuario introducido');

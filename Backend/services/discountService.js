@@ -12,6 +12,7 @@ export class DiscountService {
       try {
         return await this.DiscountModel.findAll();
       } catch (error) {
+        console.log(error); 
         throw new Error('Error fetching discounts: ' + error.message);
       }
     }

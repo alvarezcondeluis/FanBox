@@ -26,7 +26,7 @@ const productSchema = z.object({
   isActive: z.boolean({
     required_error: 'isActive is required',
     invalid_type_error: 'isActive must be a boolean'
-  }).transform(val => val ? 1 : 0), // Transformar si es necesario
+  }).transform(val => val ? 1 : 0), // En la base de datos se almacena con bit
   categoryID: z.number({
     required_error: 'Category ID is required',
     invalid_type_error: 'Category ID must be a number'

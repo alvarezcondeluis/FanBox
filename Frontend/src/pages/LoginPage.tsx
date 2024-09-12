@@ -46,8 +46,8 @@ const LoginPage: React.FC = () => {
   const handleLogin = async (values: { email: string; password: string }) => {
     try {
       setLoading(true);
-      login(values.email, values.password);
-
+      await login(values.email, values.password);
+      console.log("Avanza");
       setLoading(false);
       setInProp(false);
       getCartItems(getUser());
